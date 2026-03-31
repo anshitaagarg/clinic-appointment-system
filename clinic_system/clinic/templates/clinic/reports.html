@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reports Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body style="font-family: Arial; text-align: center;">
+
+<h1>📊 Clinic Dashboard</h1>
+
+<h2>Today's Total Patients: {{ daily_count }}</h2>
+
+<canvas id="doctorChart" width="400" height="200"></canvas>
+
+<script>
+    const labels = [
+        {% for doc in doctor_report %}
+            "{{ doc.doctor__name }}",
+        {% endfor %}
+    ];
+
+    const data = [
+        {% for doc in doctor_report %}
+            {{ doc.total }},
+        {% endfor %}
+    ];
+
+    const ctx = document.getElementById('doctorChart').getContext('2d');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Patients per Doctor',
+                data: data
+            }]
+        }
+    });
+</script>
+
+</body>
+</html>

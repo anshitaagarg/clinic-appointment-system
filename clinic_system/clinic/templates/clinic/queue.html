@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="refresh" content="5">
+    <title>Clinic Queue</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #111;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+
+        .now-serving {
+            font-size: 80px;
+            color: #00ffcc;
+            margin: 20px;
+        }
+
+        .queue-list {
+            margin-top: 40px;
+            font-size: 30px;
+        }
+
+        li {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🏥 Clinic Queue System</h1>
+
+<h2>Now Serving</h2>
+
+{% if tokens %}
+    <div class="now-serving">
+        Token {{ tokens.0.token_number }}
+    </div>
+{% else %}
+    <h2>No patients</h2>
+{% endif %}
+
+<hr>
+
+<div class="queue-list">
+    <h2>Waiting List</h2>
+    <ul>
+    {% for token in tokens %}
+        <li>Token {{ token.token_number }} - {{ token.status }}</li>
+    {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>
