@@ -1,6 +1,17 @@
 # 🏥 Clinic Appointment & Token Management System
 A web-based system to manage clinic appointments, generate tokens, and display real-time patient queues.
 ---
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Django](https://img.shields.io/badge/Django-5.x-green)
+![Database](https://img.shields.io/badge/Database-SQLite-orange)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Repo Size](https://img.shields.io/github/repo-size/anshitaagarg/clinic-appointment-system)
+![Last Commit](https://img.shields.io/github/last-commit/anshitaagarg/clinic-appointment-system)
+![Stars](https://img.shields.io/github/stars/anshitaagarg/clinic-appointment-system?style=social)
+
+---
+
 ## 🏗️ System Architecture
 
 The project follows the MVC (Model-View-Controller) architecture:
