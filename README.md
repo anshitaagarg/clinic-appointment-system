@@ -77,6 +77,10 @@ The system displays:
 - No user authentication system yet
 
 ## ⚙️ How to Run
+sites to run:
+- Administration http://127.0.0.1:8000/admin/
+- Reports http://127.0.0.1:8000/reports/
+- Queue http://127.0.0.1:8000/queue/
 
 ```bash
 # Activate virtual environment
